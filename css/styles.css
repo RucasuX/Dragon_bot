@@ -6,7 +6,7 @@ body {
   height: 640px;
   overflow: hidden;
   position: fixed;
-  background: url('assets/planet_vegeta_bg__bucchigiri_match__by_maxiuchiha22_ddmfqna-375w-2x.jpg') center no-repeat;
+  background: url('assets/back.jpg') center no-repeat;
   background-size: 360px 640px; /* Fundo com tamanho fixo de 360px por 640px */
   background-attachment: fixed; /* Fundo fixo */
 }
