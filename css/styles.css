@@ -1,0 +1,357 @@
+/* Definindo o corpo da página para ter um tamanho de 360px por 640px */
+body {
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  height: 640px;
+  overflow: hidden;
+  position: fixed;
+  background: url('assets/planet_vegeta_bg__bucchigiri_match__by_maxiuchiha22_ddmfqna-375w-2x.jpg') center no-repeat;
+  background-size: 360px 640px; /* Fundo com tamanho fixo de 360px por 640px */
+  background-attachment: fixed; /* Fundo fixo */
+}
+  
+  .header {
+    position: absolute;
+    width: 360px; /* Largura fixa */
+    height: 106px; /* Altura automática com base no conteúdo */
+    padding: 16px 12px;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 100;
+  }
+      
+  .profile_picture {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px; /* Borda arredondada */
+    background: #33363A; /* Cor de fundo */
+    box-shadow: 2px 2px 0px 0px #000; /* Sombra */
+    display: flex; /* Para centralizar a imagem */
+    justify-content: left; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-right: 11px; /* Espaçamento entre a foto e o texto */
+    flex-shrink: 0; /* Impede que a foto encolha */
+  }
+  
+  .profile_picture img {
+    width: 100%; /* Preenche a div */
+    height: 100%; /* Preenche a div */
+    border-radius: 8px; /* Mantém a borda arredondada */
+  }
+  
+  .info {
+    margin-right: 11px; /* Espaçamento entre a foto e o texto */
+  }
+
+  .name {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: left;
+  color: #FFF;
+  text-shadow: 
+    1px 1px 0px #000, 
+    -1px -1px 0px #000, 
+    -1px 1px 0px #000, 
+    1px -1px 0px #000;
+  white-space: nowrap; /* Não quebra a linha */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  text-overflow: ellipsis; /* Adiciona "..." quando o texto ultrapassa o limite */
+  }
+  
+  .power {
+    margin: 6px 0 0 0;
+    font-family: Poppins;
+    font-size: 14px; /* Fonte menor */
+    font-weight: 600; /* Pode ser menos forte que o nome */
+    line-height: 20px; /* Ajuste da altura da stroke */
+    text-align: left;
+    color: #FFF;
+    text-shadow: 
+      1px 1px 0px #000, 
+      -1px -1px 0px #000, 
+      -1px 1px 0px #000, 
+      1px -1px 0px #000;
+  }
+  
+  .rank {
+    margin: 6px 0 0 0;
+    font-family: Poppins;
+    font-size: 14px; /* Fonte menor */
+    font-weight: 600; /* Pode ser menos forte que o nome */
+    line-height: 20px; /* Ajuste da altura da stroke */
+    text-align: left;
+    color: #FFF;
+    text-shadow: 
+      1px 1px 0px #000, 
+      -1px -1px 0px #000, 
+      -1px 1px 0px #000, 
+      1px -1px 0px #000;
+  }
+
+  .dragoncoin, .energy {
+    position: absolute;
+    right: 12px; /* Mantém 11px da borda direita */
+    width: 119px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .dragoncoin {
+  top: 16px;
+  }
+
+  .energy {
+  top: 56px;
+  }
+
+  .dragoncoin img, .energy img {
+    width: 100%;
+    height: 100%;
+    }
+  
+  .text {
+    position: absolute;
+    height: 21px;
+    max-width: 45px;
+    max-height: 21px;
+    flex: 1 0 0;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    text-shadow: 
+      1px 1px 0px #000, 
+      -1px -1px 0px #000, 
+      -1px 1px 0px #000, 
+      1px -1px 0px #000;  
+  }
+    
+  .center-image {
+    position: absolute; /* Usando absolute para posicionar com relação ao elemento pai */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 328px;
+    height: 512px;
+    background: url('assets/latest\ \(16\).png') center/contain no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento para realmente centralizar */
+  }
+
+  .center-image-profile {
+    position: absolute;
+    bottom: 20px; /* Alinha 20px da margem inferior */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 328px;
+    height: 512px;
+    background: url('assets/latest\ \(16\).png') center/contain no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translateX(-50%); /* Mantém apenas o ajuste horizontal */
+  }
+
+  .health-container {
+    width: 331px;
+    height: 20px;
+    position: fixed;
+    bottom: 105px; /* Distância de 105px do fundo */
+    left: 16px; /* Centraliza horizontalmente */
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 2px 2px 0px 0px #000, 
+                0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  .health-bar {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: width 0.3s ease;
+    z-index: 99;
+    background: linear-gradient(to bottom, 
+      #7ED957 0%, 
+      #6ABD40 50%, 
+      #5CA936 100%);
+  }
+  
+  .health-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    z-index: 100;
+    text-shadow: 
+      1px 1px 0px #000, 
+      -1px -1px 0px #000, 
+      -1px 1px 0px #000, 
+      1px -1px 0px #000;
+  }
+
+  /* Footer com posição normal */
+  .menu {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    width: 328px; /* 360px - 32px de margem (16px de cada lado) */
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .menu img:first-child, .menu img:last-child {
+    width: 72px; /* Os botões laterais terão 72px */
+    height: 72px;
+    object-fit: contain;
+  }
+  
+  .menu img:nth-child(2) {
+    width: 144px; /* O botão do meio será maior */
+    height: 72px;
+    object-fit: contain;
+  }
+
+.button-left,
+.button-right {
+  position: absolute;
+  width: 21px;
+  height: 42px;
+  flex-shrink: 0;
+  aspect-ratio: 1/2;
+  top: 50%; /* Alinha ao centro verticalmente */
+  transform: translateY(-50%); /* Ajusta para ficar exatamente no centro */
+  z-index: 100;
+}
+
+.button-left {
+  left: 24px; /* 24px da esquerda */
+  background: url('assets/back.png') center/contain no-repeat;
+}
+
+.button-right {
+  right: 24px; /* 24px da direita */
+  background: url('assets/forward.png') center/contain no-repeat;
+}
+
+.mission-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 16px;
+  height: 56px; /* Mantém tudo dentro dos 56px */
+  gap: 15px;
+}
+
+.missions {
+  display: flex;
+  flex-direction: column;
+  width: 257px;
+  height: 56px;
+  padding: 8px 16px 6px 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box; /* Garante que altura total inclua padding e borda */
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: var(--Grayscale-White, #FFF);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mission-image {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a imagem ajustada */
+}
+
+.mission-text {
+  position: absolute;
+  bottom: 6px; /* Define a distância do fundo */
+  text-align: center;
+  color: #FFF;
+    font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  height: 15px;
+  width: 100%; /* Garante que o texto fique centralizado */
+  white-space: nowrap; /* Evita que o texto quebre */
+  overflow: hidden; /* Impede texto maior que 5 caracteres */
+  text-overflow: ellipsis; /* Adiciona "..." se ultrapassar 5 caracteres */
+  text-shadow: 
+      1px 1px 0px #000, 
+      -1px -1px 0px #000, 
+      -1px 1px 0px #000, 
+      1px -1px 0px #000;
+}
+
+.head-mission {
+  color: #33363A;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: bold;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.body-mission {
+  color: #33363A;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
